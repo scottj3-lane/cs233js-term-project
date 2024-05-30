@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p {
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: -38px; /* Move the navbar higher */
+  left: 20px; /* Align to the left side of the container */
+  display: flex;
+  justify-content: flex-start; /* Justify content to the left */
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.nav-button {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 50px;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+  margin: 0 -1px;
+  margin-right: 20px;
+}
+
+.nav-button1 {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 50px;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+  margin: 0 -1px;
+  margin-right: 20px;
+}
+
+.nav-button2 {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 50px;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+  margin: 0 -1px;
+  margin-right: 20px;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+.nav-button1:hover {
+  background-color: #555;
+}
+
+.nav-button2:hover {
+  background-color: #555;
+}
+
+.input-field {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.input-field input {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-button, .share-button {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  width: 150px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button {
+  background-color: rgb(3, 169, 244);
+}
+
+.add-button:hover {
+  background-color: rgb(2, 136, 209);
+}
+
+.share-button {
+  background-color: rgb(114, 54, 255);
+}
+
+.share-button:hover {
+  background-color: rgb(97, 47, 216);
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .card-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card.flipped .card-container {
+  transform: rotateY(180deg);
+}
+
+.card .card-front, .card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .card-front {
+  background-color: rgb(3, 169, 244);
+  color: #fff;
+}
+
+.card .card-back {
+  background-color: rgb(233, 30, 99);
+  color: #fff;
+  transform: rotateY(180deg); /* needed to display properly */
+}
+
+.delete-button {
+  position: absolute;
+  z-index: 1;
+  right: 5px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.card-container:hover .delete-button {
+  display: block;
+}

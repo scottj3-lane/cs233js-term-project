@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Cards</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="navbar">
+      <a href="#" class="nav-button">Home</a>
+      <a href="#" class="nav-button1">About</a>
+      <a href="#" class="nav-button2">Contact</a>
+    </div>
+
+    <p>Click a card to flip it. You can add new cards at the top of this page. Pressing the X inside of a card will delete it.</p>
+
+    <div class="input-field">
+      <input type="text" id="frontContent" placeholder="Front of card">
+      <input type="text" id="backContent" placeholder="Back of card">
+
+      <button class="add-button" onclick="addNewCardFromInput()">Add</button>
+      <button class="share-button" onclick="encodeCards()">Share Cards</button>
+      <button class="share-button" onclick="extractCardsFromUrl()">Import Cards</button>
+    </div>
+
+    <div class="card-container" id="cardContainer"></div>
+
+  </div>
+
+  <script src="card.js" type="module"></script>
+</body>
+</html>
