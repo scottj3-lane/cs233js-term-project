@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Jeremy Scott - 6/6/2024 -->
   <meta charset="UTF-8">
   <title>Quiz Cards</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css">
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
+  <div class="content">
     <div class="navbar">
-      <a href="#" class="nav-button">Home</a>
-      <a href="#" class="nav-button1">About</a>
-      <a href="#" class="nav-button2">Contact</a>
+      <a href="#" id="togglePageButton" class="nav-button">Lists</a>
     </div>
 
-    <p>Click a card to flip it. You can add new cards at the top of this page. Pressing the X inside of a card will delete it.</p>
+    <p></p>
 
-    <div class="input-field">
-      <input type="text" id="frontContent" placeholder="Front of card">
-      <input type="text" id="backContent" placeholder="Back of card">
+    <div id="pageContent">
+      <div class="input-field">
+        <input type="text" id="frontContent" placeholder="Front of card">
+        <input type="text" id="backContent" placeholder="Back of card">
+        <button class="add-button" onclick="addNewCardFromInput()">Add</button>
+      </div>
 
-      <button class="add-button" onclick="addNewCardFromInput()">Add</button>
-      <button class="share-button" onclick="encodeCards()">Share Cards</button>
-      <button class="share-button" onclick="extractCardsFromUrl()">Import Cards</button>
+      <div class="card-container" id="cardContainer"></div>
     </div>
-
-    <div class="card-container" id="cardContainer"></div>
-
   </div>
 
-  <script src="card.js" type="module"></script>
+  <div id="iconContainer">
+    <i id="icon" class="fas fa-moon"></i>
+  </div>
+
+  <div id="iconContainer2">
+    <i id="icon2" class="fas fa-cog"></i>
+
+    <div id="settingsFlyout" class="flyout">
+      <ul>
+        <li>Setting 1</li>
+        <li>Setting 2</li>
+        <li>Setting 3</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<script src="general.js" type="module"></script>
 </body>
 </html>
